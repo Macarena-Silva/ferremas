@@ -1,0 +1,27 @@
+{% extends "home/base.html" %}
+
+{% load static %}
+
+{% block content  %}
+
+<div class="container mt-5">
+  <h2 class="mb-4">Panel de Bodega</h2>
+
+  <div class="card mb-3">
+    <div class="card-header">Órdenes Pendientes</div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Pedido #001 - Taladro Makita x2 - Retiro Tienda</li>
+      <li class="list-group-item">Pedido #002 - Tornillos Sika x5 - Enviar a domicilio</li>
+    </ul>
+  </div>
+
+  <div class="card mb-3">
+    <div class="card-header">Acciones</div>
+    <div class="card-body">
+      <button class="btn btn-success">Marcar pedido como preparado</button>
+      <button class="btn btn-warning">Notificar al vendedor</button>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

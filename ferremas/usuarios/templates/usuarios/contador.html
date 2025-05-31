@@ -1,0 +1,25 @@
+{% extends "home/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 mb-3">
+  <h2 class="mb-4">Panel del Contador</h2>
+
+  <div class="card mb-3">
+    <div class="card-header">Pagos por Confirmar</div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Pedido #001 - $45.000 - Transferencia pendiente</li>
+      <li class="list-group-item">Pedido #002 - $12.500 - Confirmado</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-header">Acciones</div>
+    <div class="card-body">
+      <button class="btn btn-primary">Confirmar Pago</button>
+      <button class="btn btn-secondary">Ver Historial Financiero</button>
+    </div>
+  </div>
+</div>
+{% endblock %}

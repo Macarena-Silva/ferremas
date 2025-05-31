@@ -1,0 +1,43 @@
+{% extends "home/base.html" %}
+
+{% load static %}
+
+{% block content  %}
+<div class="container mt-5 mb-3">
+  <h2 class="mb-4">Panel de Administrador</h2>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="card-header">Resumen de Ventas</div>
+        <div class="card-body">
+          <p>Total mensual: <strong>$1.250.000</strong></p>
+          <p>Órdenes completadas: <strong>34</strong></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Acciones</div>
+        <div class="card-body">
+          <button class="btn btn-outline-primary">Generar informe</button>
+          <button class="btn btn-outline-success">Crear promoción</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Gestión de Usuarios</div>
+        <div class="card-body">
+          <ul>
+            <li>Usuario: jvendedor - Rol: Vendedor</li>
+            <li>Usuario: clopez - Rol: Contador</li>
+          </ul>
+          <button class="btn btn-outline-warning">Modificar rol</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>    
+
+{% endblock %}

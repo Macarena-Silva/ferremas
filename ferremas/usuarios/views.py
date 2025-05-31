@@ -12,3 +12,15 @@ def logout(request):
 def register(request):
 
     return render(request, "usuarios/register.html" )
+
+def admin(request):
+
+    return render(request, "usuarios/admin.html" )
+
+def bodeguero(request):
+
+    return render(request, "usuarios/bodeguero.html" )
+
+def contador(request):
+
+    return render(request, "usuarios/contador.html" )
