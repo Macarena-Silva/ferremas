@@ -1,0 +1,66 @@
+{% extends "home/base.html" %}
+
+{% load static %}
+
+{% block content  %}
+  <div class="container-fluid">
+    <div id="productos" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{%static 'Pagina_Ferremas/img/img2.jpg' %}" class="d-block w-100 img-carousel-home" alt="" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'Pagina_Ferremas/img/img1.jpg' %}" class="d-block w-100 img-carousel-home" alt="" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#productos" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#productos" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="container-sm mb-4 text-center">
+    <br>
+    <h1 style="margin-bottom: 2rem;">Productos destacados</h1>
+    <div class="row mt-3">
+      {% for producto in productos|slice:":3" %}
+      <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
+          <div class="card h-100">
+              <img src="#" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                  <h6 class="card-title">Nombre</h6>
+                  <p class="card-text">Descrpcion</p>
+                  <h5 class="card-text"><strong>$Precio</strong></h5>
+                  
+                  <a href="" class="btn btn-primary btn-block mb-2">
+                      <i class="fa-solid fa-basket-shopping"></i> Ver detalles
+                  </a>
+                  <br>
+                  <a href="#" class="btn btn-primary btn-block mb-2">
+                      <i class="fa-solid fa-basket-shopping"></i> Agregar al carrito
+                  </a>
+              </div>
+          </div>
+      </div>
+      {% endfor %} 
+    </div>
+  </div>
+
+  <div class="newsletter-banner-container pre_footer">
+    <div>
+      <h2>¡NOVEDADES Y BENEFICIOS!</h2>
+    </div>
+    <div>
+      <p>Suscríbete ahora a nuestro newsletter y recibe en tu email ofertas exclusivas, promociones ¡y mucho más!</p>
+      <button class="btn btn-primary btn-lg">Suscribirse</button>
+    </div>
+
+    <div style="display:none"></div>
+  </div>
+
+{% endblock %}
